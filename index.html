@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fayaz's Blog</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #0d47a1;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #1565c0;
+      padding: 1rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      background: #fff;
+      color: #1565c0;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #e3f2fd;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    section {
+      background: #ffffff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #0d47a1;
+    }
+
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-post {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .blog-post h3 {
+      color: #333;
+    }
+
+    .read-more-toggle {
+      display: none;
+    }
+
+    .read-more-label {
+      color: #007BFF;
+      cursor: pointer;
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .more-text {
+      display: none;
+      margin-top: 0.5rem;
+    }
+
+    .read-more-toggle:checked + .read-more-label + .more-text {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      background: #0d47a1;
+      color: white;
+      padding: 1.5rem 1rem;
+    }
+
+    a {
+      color: #64b5f6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fayaz's Blog</h1>
+    <p>Web Development | Learning | Sharing Knowledge</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#blog">Blog Posts</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm <strong>Fayaz Shaikh</strong>, a B.Tech CSE student at ITM Skills University. I enjoy creating beautiful, functional websites using HTML, CSS, and JavaScript. My passion lies in building projects and constantly learning new technologies in web development. Through this blog, I aim to share knowledge and experiences to help others in their coding journey.</p>
+    </section>
+
+    <section id="blog">
+      <h2>Blog Posts</h2>
+      <div class="blog-container">
+
+        <div class="blog-post">
+          <h3>Getting Started with HTML</h3>
+          <p>Learn the basics of HTML and how it forms the structure of web pages.</p>
+          <input type="checkbox" id="post1" class="read-more-toggle">
+          <label for="post1" class="read-more-label">Read More →</label>
+          <div class="more-text">
+            <p>HTML stands for HyperText Markup Language. It’s used to create the structure of web pages, including elements like headings, paragraphs, images, links, and more.</p>
+          </div>
+        </div>
+
+        <div class="blog-post">
+          <h3>Why Learn CSS?</h3>
+          <p>CSS styles your HTML and makes your site look attractive and responsive.</p>
+          <input type="checkbox" id="post2" class="read-more-toggle">
+          <label for="post2" class="read-more-label">Read More →</label>
+          <div class="more-text">
+            <p>CSS stands for Cascading Style Sheets. It helps you design layouts, colors, fonts, spacing, and animations to enhance user experience on your website.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you'd like to connect or collaborate, feel free to reach out:</p>
+      <ul>
+        <li>Email: <a href="mailto:fayazshaikh1106@gmail.com">fayazshaikh1106@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/Fayaz5506" target="_blank">Fayaz5506</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/fayaz-shaikh-b49950337/" target="_blank">Fayaz Shaikh</a></li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Fayaz's Blog | Designed with ❤️</p>
+  </footer>
+
+</body>
+</html>
